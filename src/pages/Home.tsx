@@ -12,12 +12,12 @@ class home extends Component<{}, State> {
         this.state = {
             ShoppeListPhone: []
         }
-        let LocalPhone = localStorage.getItem('ShoppePhone');
+        let LocalPhone = localStorage.getItem('Shopee');
         let LocalShooppe = JSON.parse(LocalPhone || '[]');
         this.state = {
             ShoppeListPhone: LocalShooppe
         }
-
+        console.log(this.state.ShoppeListPhone)
 
 
 

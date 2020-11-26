@@ -6,14 +6,17 @@ import { Product } from '../../model/Product';
 class productItem extends Component<Props, State>  {
     constructor(props: Props) {
         super(props);
-
+        this.state = {
+            ShoppeListPhone: this.props.ShoppeListPhone
+        }
+        console.log(this.state.ShoppeListPhone)
     }
 
     render() {
         return (
             <div className='products'>
                 {this.state.ShoppeListPhone.map(item => {
-                     <Item  {...item} />
+                    return <Item  {...item} />
                 })}
             </div>
         );
