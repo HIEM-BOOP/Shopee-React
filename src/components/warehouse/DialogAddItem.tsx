@@ -94,7 +94,7 @@ class DialogAddItem extends Component<Props, State> {
     }
 }
 type Props = {
-    showDialog: boolean
+    showDialog: boolean 
     onChangeExit(exit: boolean): void;
 }
 type State = Product

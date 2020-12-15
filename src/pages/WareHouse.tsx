@@ -64,6 +64,7 @@ class warehouse extends Component<{}, State> {
                     }} />
                 </div>
 
+
                 {this.state.showDialogUppdate == true && <UpdateItem onChangeExitDiaLogUpdate={(event) => {
                     this.setState({ showDialogUppdate: false })
                 }} propsProductID={this.state.showDialogUppdateID} />}

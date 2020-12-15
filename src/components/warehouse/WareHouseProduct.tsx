@@ -12,10 +12,8 @@ class WareHouseProduct extends Component<Props, State>  {
         this.state = {
             ShoppeListPhone: this.props.ShoppeListPhone,
             propsShowDiaLogUpdate: false ,     
-            onChangeDialogUpdate: ''
-    
+            onChangeDialogUpdate: '' ,
         }
-
     }
 
     render() {

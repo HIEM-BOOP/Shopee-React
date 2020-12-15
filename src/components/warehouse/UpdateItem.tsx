@@ -6,7 +6,7 @@ class UpdateItem extends Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {
-            idProduct: '', afterSale: 1000, beforSale: 0, imgProduct: '', nameProduct: '', percentageDiscount: 0
+            idProduct: '', afterSale: 0, beforSale: 0, imgProduct: '', nameProduct: '', percentageDiscount: 0
         }
         let LocalPhone = localStorage.getItem('Shopee');
         let LocalShooppe = JSON.parse(LocalPhone || '[]');
@@ -51,10 +51,10 @@ class UpdateItem extends Component<Props, State> {
                             let LocalPhone = localStorage.getItem('Shopee');
                             let LocalShooppe = JSON.parse(LocalPhone || '[]');
                             LocalShooppe.map((item: any) => {
-                                item.idProduct == this.state.idProduct ? newArray.push(this.state) : newArray.push(item)
+                                item.idProduct === this.state.idProduct ? newArray.push(this.state) : newArray.push(item)
                             })
                             localStorage.setItem("Shopee", JSON.stringify(newArray));
-                            alert('Chúc mừng mày đả sửa thành công')
+                            alert('Chúc mừng bạn đã sửa thành công')
                             window.location.href = "/WareHouse"
 
                         }}   >Lưu</button>

@@ -85,7 +85,7 @@ class Item extends Component<Props, State>  {
                             let objShopee = ArrayNew
                             listShopee.push(objShopee)
                             localStorage.setItem("Cart", JSON.stringify(listShopee));
-                            alert('Chúc mừng mày đả thêm thành công')
+                            alert('Chúc mừng bạn đã thêm thành công')
                         }
                     // window.location.href = "http://localhost:3000/"
                 }}>
