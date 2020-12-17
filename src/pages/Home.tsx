@@ -3,7 +3,6 @@ import Header from '../components/home/Header';
 import Pooter from '../components/home/Pooter';
 import Slider from '../components/home/Slider';
 import ProductItem from '../components/home/ProductItem';
-import { type } from 'os';
 
 
 class home extends Component<{}, State> {

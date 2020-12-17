@@ -12,7 +12,12 @@ class Item extends Component<Props, State>  {
                 quantityProduct: 1
             },
             objItem: {
-                idProduct: this.props.idProduct, afterSale: this.props.afterSale, beforSale: this.props.beforSale, imgProduct: this.props.imgProduct, nameProduct: this.props.nameProduct, percentageDiscount: this.props.percentageDiscount
+                idProduct: this.props.idProduct,
+                 afterSale: this.props.afterSale, 
+                 beforSale: this.props.beforSale,
+                imgProduct: this.props.imgProduct,
+                nameProduct: this.props.nameProduct,
+                percentageDiscount: this.props.percentageDiscount
             }
         }
         let LocalPhoneCart = localStorage.getItem('Cart');
@@ -63,7 +68,7 @@ class Item extends Component<Props, State>  {
                     let localForMe = localStorage.getItem("Cart");
                     let listShopee = JSON.parse(localForMe || "[]");
                     listShopee.map((item: any) => {
-                        if (item.idProduct == this.props.idProduct) {
+                        if (item.idProduct === this.props.idProduct) {
                             item.quantityProduct = item.quantityProduct++
                         }
 
@@ -71,14 +76,14 @@ class Item extends Component<Props, State>  {
                     let KiemTre = false;
                     let isExist = false;
                     listShopee.forEach((item: any) => {
-                        if (item.idProduct == this.props.idProduct) {
+                        if (item.idProduct === this.props.idProduct) {
                             ArrayNew.quantityProduct = item.quantityProduct++
                             localStorage.setItem("Cart", JSON.stringify(listShopee));
                             alert('Chúc mừng mày đả Tăng thành công');
                             isExist = true;
                           
                         }
-                        if(item.idProduct != this.props.idProduct){  KiemTre = true }
+                        if(item.idProduct !== this.props.idProduct){  KiemTre = true }
 
                     })
                         if(!isExist){
@@ -87,7 +92,7 @@ class Item extends Component<Props, State>  {
                             localStorage.setItem("Cart", JSON.stringify(listShopee));
                             alert('Chúc mừng bạn đã thêm thành công')
                         }
-                    // window.location.href = "http://localhost:3000/"
+                    
                 }}>
                     Đưa vào giỏ hàng
 
